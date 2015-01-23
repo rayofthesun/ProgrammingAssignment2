@@ -5,7 +5,8 @@
 ## of recomputing
 
 
-##function makeCacheMatrix   
+##function makeCacheMatrix creates a special vectori, containing 
+## a function to set/get the matrix and its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
     inverse <- NULL
@@ -22,7 +23,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve calculates the inverse of the special matrix
+## created in the makeCacheMatrix function. 
+## It first checks if inverse in present in the cache, if not
+## it calculates the inverse and stores it in the cache
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
